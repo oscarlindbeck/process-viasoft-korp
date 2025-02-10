@@ -1,0 +1,11 @@
+.flex {
+    display: flex;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}

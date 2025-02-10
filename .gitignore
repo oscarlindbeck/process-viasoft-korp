@@ -1,0 +1,13 @@
+# Angular (front-end)
+front-end/node_modules/
+front-end/dist/
+front-end/.angular/
+front-end/.vscode/
+front-end/*.log
+
+# C# (back-end)
+back-end/bin/
+back-end/obj/
+back-end/.vs/
+back-end/*.user
+back-end/packages/

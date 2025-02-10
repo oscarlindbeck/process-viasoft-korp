@@ -1,0 +1,10 @@
+<nz-page-header nzTitle="CRUD" nzSubtitle="Projeto dedicado ao processo seletivo da Viasoft Korp" />
+
+<div class="flex justify-end mb-16">
+    <button nz-button nzType="primary" (click)="showCreateModal()">Adicionar item</button>
+</div>
+
+<main-table [items]="items" (editItem)="showEditModal($event)" (deleteItemId)="onDelete($event)"></main-table>
+
+<main-form [isVisible]="isVisible" [isEditing]="isEditing" [form]="form" (closeModal)="handleCancel()"
+    (submitForm)="handleConfirm($event)"></main-form>

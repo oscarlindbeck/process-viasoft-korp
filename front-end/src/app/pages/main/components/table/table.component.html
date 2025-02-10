@@ -1,0 +1,33 @@
+<nz-table #headerTable nzOuterBordered nzTitle="Itens em estoque" [nzData]="items" [nzScroll]="{ y: '300px' }"
+    [nzShowPagination]="false">
+    <thead>
+        <tr>
+            <th nzWidth="75px">#</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Data de validade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of items; track item.id){
+        <tr>
+            <td>{{$index}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.unit_measure}}</td>
+            <td nzRight>
+                <a (click)="onEdit(item)">
+                    <nz-icon nzType="edit" nzTheme="outline"/>
+                </a>
+                <nz-divider nzType="vertical"></nz-divider>
+
+                <a nz-popconfirm [nzPopconfirmTitle]="'Deseja realmente deletar o item ' + item.description + '?'" nzPopconfirmPlacement="bottom"
+                    (nzOnConfirm)="onDelete(item.id ? item.id : '')">
+                    <nz-icon nzType="delete" nzTheme="outline" />
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</nz-table>
