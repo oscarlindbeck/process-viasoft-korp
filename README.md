@@ -6,7 +6,7 @@ Angular 19
 NG Zorro (UI Components)
 TypeScript
 
-Características
+### Características
 
 Interface moderna e responsiva
 CRUD completo utilizando componentes NG Zorro
